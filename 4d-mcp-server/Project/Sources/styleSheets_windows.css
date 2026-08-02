@@ -1,0 +1,41 @@
+/* MCP_Settings form style classes (Windows) */
+/* Generated from current top-level object styling in form.4DForm */
+
+.rectangle {
+	color: transparent;
+}
+
+.text {
+	font-family: "Segoe UI";
+}
+
+.checkbox {
+	font-family: "Segoe UI";
+	font-size: 12px;
+}
+
+.groupBox {
+	font-weight: bold;
+}
+
+.tab {
+	font-family: "Segoe UI";
+	font-size: 12px;
+}
+
+.listbox {
+	font-family: "Segoe UI";
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.input-text {
+	font-family: "Segoe UI";
+}
+
+.input-integer {
+	font-family: "Segoe UI";
+	font-size: 12px;
+	background-color: #FFFFFF;
+}

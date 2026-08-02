@@ -1,0 +1,41 @@
+/* MCP_Settings form style classes (macOS) */
+/* Mirrors Windows class coverage with macOS typography */
+
+.rectangle {
+	color: transparent;
+}
+
+.text {
+	font-family: "SF Pro Text";
+}
+
+.checkbox {
+	font-family: "SF Pro Text";
+	font-size: 12px;
+}
+
+.groupBox {
+	font-weight: bold;
+}
+
+.tab {
+	font-family: "SF Pro Text";
+	font-size: 12px;
+}
+
+.listbox {
+	font-family: "SF Pro Text";
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.input-text {
+	font-family: "SF Pro Text";
+}
+
+.input-integer {
+	font-family: "SF Pro Text";
+	font-size: 12px;
+	background-color: #FFFFFF;
+}

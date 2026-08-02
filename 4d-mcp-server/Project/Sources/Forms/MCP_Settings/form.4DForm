@@ -28,7 +28,7 @@
 					"width": 760,
 					"height": 600,
 					"fill": "#F4F4F4",
-					"stroke": "transparent"
+					"class": "rectangle"
 				},
 				"lblTarget": {
 					"type": "text",
@@ -37,9 +37,9 @@
 					"width": 40,
 					"height": 20,
 					"text": "File:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"ddTarget": {
 					"type": "dropdown",
@@ -52,7 +52,8 @@
 					"tooltip": "Which copy of 4D-mcp-config.pref this window is editing.",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "dropdown"
 				},
 				"btnReveal": {
 					"type": "button",
@@ -64,7 +65,8 @@
 					"tooltip": "Show the config file on disk.",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnReload": {
 					"type": "button",
@@ -76,7 +78,8 @@
 					"tooltip": "Discard edits and re-read the file from disk.",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"dirtyIndicator": {
 					"type": "input",
@@ -89,12 +92,12 @@
 					"enterable": false,
 					"focusable": false,
 					"borderStyle": "none",
-					"fontFamily": "Segoe UI",
 					"fontSize": 11,
 					"stroke": "#B36B00",
 					"textAlign": "right",
 					"contextMenu": "none",
-					"fill": "transparent"
+					"fill": "transparent",
+					"class": "input-text"
 				},
 				"tabs": {
 					"type": "tab",
@@ -113,12 +116,11 @@
 					],
 					"dataSource": "Form.currentTab",
 					"dataSourceTypeHint": "integer",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"events": [
 						"onClick"
 					],
-					"action": "gotoPage"
+					"action": "gotoPage",
+					"class": "tab"
 				},
 				"footerDivider": {
 					"type": "rectangle",
@@ -127,7 +129,7 @@
 					"width": 760,
 					"height": 1,
 					"fill": "#DADADA",
-					"stroke": "transparent"
+					"class": "rectangle"
 				},
 				"statusText": {
 					"type": "input",
@@ -140,13 +142,13 @@
 					"enterable": false,
 					"focusable": false,
 					"borderStyle": "none",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#555555",
 					"contextMenu": "none",
 					"fill": "transparent",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "input-text"
 				},
 				"btnCancel": {
 					"type": "button",
@@ -157,7 +159,8 @@
 					"text": "Cancel",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnApply": {
 					"type": "button",
@@ -169,7 +172,8 @@
 					"tooltip": "Write the file and keep this window open.",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnSave": {
 					"type": "button",
@@ -181,7 +185,8 @@
 					"defaultButton": true,
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				}
 			}
 		},
@@ -194,7 +199,7 @@
 					"left": 24,
 					"width": 700,
 					"height": 250,
-					"fontWeight": "bold"
+					"class": "groupBox"
 				},
 				"cbEnabled": {
 					"type": "checkbox",
@@ -205,11 +210,10 @@
 					"text": "ENABLED — master switch",
 					"dataSource": "Form:C1466.enabled",
 					"dataSourceTypeHint": "boolean",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "checkbox"
 				},
 				"lblEnabledHint": {
 					"type": "text",
@@ -218,10 +222,10 @@
 					"width": 640,
 					"height": 16,
 					"text": "Off = the component loads but answers nothing (403 CAP_DENIED), valid token or not.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"lblPort": {
 					"type": "text",
@@ -230,9 +234,9 @@
 					"width": 110,
 					"height": 20,
 					"text": "HTTP port:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"inputPort": {
 					"type": "input",
@@ -242,14 +246,12 @@
 					"height": 18,
 					"dataSourceTypeHint": "integer",
 					"dataSource": "Form:C1466.httpPort",
-					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"contextMenu": "automatic",
-					"fill": "#FFFFFF",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-integer",
+					"borderStyle": "system"
 				},
 				"lblPortHint": {
 					"type": "text",
@@ -258,11 +260,11 @@
 					"width": 460,
 					"height": 32,
 					"text": "Port for the component's own web server, started by MCP_Initialize_Host. 0 = don't start one (serve /mcp from the host's web server). Read at startup only — a change needs a restart.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				},
 				"cbRequireHttps": {
 					"type": "checkbox",
@@ -273,11 +275,10 @@
 					"text": "REQUIRE_HTTPS — refuse requests over plain HTTP",
 					"dataSource": "Form:C1466.requireHttps",
 					"dataSourceTypeHint": "boolean",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "checkbox"
 				},
 				"lblHttpsHint": {
 					"type": "text",
@@ -286,10 +287,10 @@
 					"width": 640,
 					"height": 16,
 					"text": "Plain HTTP is answered with 403 CAP_DENIED. Set this off only for local development.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"lblMaxBody": {
 					"type": "text",
@@ -298,9 +299,9 @@
 					"width": 110,
 					"height": 20,
 					"text": "Max body size:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"inputMaxBody": {
 					"type": "input",
@@ -310,14 +311,12 @@
 					"height": 18,
 					"dataSourceTypeHint": "integer",
 					"dataSource": "Form:C1466.maxBodySize",
-					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"contextMenu": "automatic",
-					"fill": "#FFFFFF",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-integer",
+					"borderStyle": "system"
 				},
 				"lblMaxBodyHint": {
 					"type": "text",
@@ -326,10 +325,10 @@
 					"width": 440,
 					"height": 20,
 					"text": "Bytes. Oversize requests are rejected with BAD_PARAMS. 0 = unlimited.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"lblEndpointHint": {
 					"type": "text",
@@ -338,11 +337,11 @@
 					"width": 660,
 					"height": 34,
 					"text": "The endpoint path is set in HTTPHandlers.json, and IP filtering belongs in the web server settings or a reverse proxy — neither is configurable here.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				},
 				"gbRuntime": {
 					"type": "groupBox",
@@ -351,7 +350,7 @@
 					"left": 24,
 					"width": 700,
 					"height": 180,
-					"fontWeight": "bold"
+					"class": "groupBox"
 				},
 				"runtimeStatus": {
 					"type": "input",
@@ -364,13 +363,13 @@
 					"enterable": false,
 					"focusable": false,
 					"borderStyle": "none",
-					"fontFamily": "Segoe UI",
 					"fontSize": 11,
 					"stroke": "#555555",
 					"contextMenu": "none",
 					"fill": "transparent",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "input-text"
 				}
 			}
 		},
@@ -383,7 +382,7 @@
 					"left": 24,
 					"width": 700,
 					"height": 200,
-					"fontWeight": "bold"
+					"class": "groupBox"
 				},
 				"cbAllowRead": {
 					"type": "checkbox",
@@ -394,11 +393,10 @@
 					"text": "ALLOW_READ — get_schema_digest, query_entities, get_entity",
 					"dataSource": "Form:C1466.allowRead",
 					"dataSourceTypeHint": "boolean",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "checkbox"
 				},
 				"cbAllowWrite": {
 					"type": "checkbox",
@@ -409,11 +407,10 @@
 					"text": "ALLOW_WRITE — create_entity, update_entity",
 					"dataSource": "Form:C1466.allowWrite",
 					"dataSourceTypeHint": "boolean",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "checkbox"
 				},
 				"cbAllowDelete": {
 					"type": "checkbox",
@@ -424,11 +421,10 @@
 					"text": "ALLOW_DELETE — delete_entity",
 					"dataSource": "Form:C1466.allowDelete",
 					"dataSourceTypeHint": "boolean",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "checkbox"
 				},
 				"cbAllowCall": {
 					"type": "checkbox",
@@ -439,11 +435,10 @@
 					"text": "ALLOW_CALL_METHOD — call_method (the actions live on the Methods tab)",
 					"dataSource": "Form:C1466.allowCall",
 					"dataSourceTypeHint": "boolean",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "checkbox"
 				},
 				"lblVerbsHint": {
 					"type": "text",
@@ -452,11 +447,11 @@
 					"width": 660,
 					"height": 40,
 					"text": "These gates are checked before the token's own capability, so they bound every token — a wildcard token included. A token can never do more than the config allows.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				},
 				"gbPaging": {
 					"type": "groupBox",
@@ -465,7 +460,7 @@
 					"left": 24,
 					"width": 700,
 					"height": 130,
-					"fontWeight": "bold"
+					"class": "groupBox"
 				},
 				"lblDefaultLimit": {
 					"type": "text",
@@ -474,9 +469,9 @@
 					"width": 130,
 					"height": 20,
 					"text": "Default page size:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"inputDefaultLimit": {
 					"type": "input",
@@ -486,14 +481,12 @@
 					"height": 18,
 					"dataSourceTypeHint": "integer",
 					"dataSource": "Form:C1466.defaultLimit",
-					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"contextMenu": "automatic",
-					"fill": "#FFFFFF",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-integer",
+					"borderStyle": "system"
 				},
 				"lblDefaultLimitHint": {
 					"type": "text",
@@ -502,10 +495,10 @@
 					"width": 440,
 					"height": 20,
 					"text": "Page size used by query_entities when the client sends no limit.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"lblMaxLimit": {
 					"type": "text",
@@ -514,9 +507,9 @@
 					"width": 130,
 					"height": 20,
 					"text": "Max page size:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"inputMaxLimit": {
 					"type": "input",
@@ -526,14 +519,12 @@
 					"height": 18,
 					"dataSourceTypeHint": "integer",
 					"dataSource": "Form:C1466.maxLimit",
-					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"contextMenu": "automatic",
-					"fill": "#FFFFFF",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-integer",
+					"borderStyle": "system"
 				},
 				"lblMaxLimitHint": {
 					"type": "text",
@@ -542,11 +533,11 @@
 					"width": 440,
 					"height": 32,
 					"text": "Hard cap on page size. Wire contract v1 fixes the ceiling at 80 — this may only be set lower, never higher.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				}
 			}
 		},
@@ -561,11 +552,10 @@
 					"text": "RESPECT_4D_SCHEMA — honour the \"Expose as REST resource\" table and field settings",
 					"dataSource": "Form:C1466.respectSchema",
 					"dataSourceTypeHint": "boolean",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "checkbox"
 				},
 				"lblRespectHint": {
 					"type": "text",
@@ -574,10 +564,10 @@
 					"width": 680,
 					"height": 16,
 					"text": "Off = every table and field is exposed, so the lists below become your only filter.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"lbTables": {
 					"type": "listbox",
@@ -594,11 +584,6 @@
 					"currentItemSource": "Form:C1466.currentTable",
 					"currentItemPositionSource": "Form:C1466.currentTableIndex",
 					"selectionMode": "single",
-					"stroke": "#000000",
-					"fill": "#FFFFFF",
-					"alternateFill": "#F7F7F7",
-					"fontFamily": "Segoe UI",
-					"fontSize": 11,
 					"events": [
 						"onSelectionChange",
 						"onDoubleClick"
@@ -713,7 +698,9 @@
 								"name": "ftTableNote"
 							}
 						}
-					]
+					],
+					"class": "listbox",
+					"alternateFill": "#F7F7F7"
 				},
 				"btnRuleDefault": {
 					"type": "button",
@@ -725,7 +712,8 @@
 					"tooltip": "Neither listed nor blocked — RESPECT_4D_SCHEMA decides.",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnRuleWhitelist": {
 					"type": "button",
@@ -736,7 +724,8 @@
 					"text": "Whitelist",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnRuleBlacklist": {
 					"type": "button",
@@ -747,7 +736,8 @@
 					"text": "Blacklist",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnTablesClear": {
 					"type": "button",
@@ -759,7 +749,8 @@
 					"tooltip": "Reset every dataclass to Default (empties both lists).",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnTablesRefresh": {
 					"type": "button",
@@ -771,7 +762,8 @@
 					"tooltip": "Re-read the host datastore.",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"lblTablesHint": {
 					"type": "text",
@@ -780,11 +772,11 @@
 					"width": 224,
 					"height": 40,
 					"text": "Double-click a row to cycle its rule. A non-empty whitelist overrides both the blacklist and RESPECT_4D_SCHEMA.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				}
 			}
 		},
@@ -797,11 +789,11 @@
 					"width": 700,
 					"height": 30,
 					"text": "Every entry here hands clients a door into host code. \"Method\" is the host project method call_method executes and is never sent to clients; the rest is documentation surfaced by get_schema_digest.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#8A5A00",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				},
 				"lbActions": {
 					"type": "listbox",
@@ -818,11 +810,6 @@
 					"currentItemSource": "Form:C1466.currentAction",
 					"currentItemPositionSource": "Form:C1466.currentActionIndex",
 					"selectionMode": "single",
-					"stroke": "#000000",
-					"fill": "#FFFFFF",
-					"alternateFill": "#F7F7F7",
-					"fontFamily": "Segoe UI",
-					"fontSize": 11,
 					"events": [
 						"onSelectionChange"
 					],
@@ -870,7 +857,9 @@
 								"name": "ftActionMethod"
 							}
 						}
-					]
+					],
+					"class": "listbox",
+					"alternateFill": "#F7F7F7"
 				},
 				"btnAddAction": {
 					"type": "button",
@@ -881,7 +870,8 @@
 					"text": "Add",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnRemoveAction": {
 					"type": "button",
@@ -892,7 +882,8 @@
 					"text": "Remove",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnDupAction": {
 					"type": "button",
@@ -903,7 +894,8 @@
 					"text": "Duplicate",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"lblNoActions": {
 					"type": "text",
@@ -912,12 +904,12 @@
 					"width": 434,
 					"height": 40,
 					"text": "No action selected. Click Add to expose a host method to clients.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 11,
 					"stroke": "#777777",
 					"multiline": "yes",
 					"wordwrap": "automatic",
-					"hideWhen": "Form.hasAction=True"
+					"hideWhen": "Form.hasAction=True",
+					"class": "text"
 				},
 				"lblActionName": {
 					"type": "text",
@@ -926,10 +918,10 @@
 					"width": 70,
 					"height": 18,
 					"text": "Action:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"verticalAlign": "middle",
-					"hideWhen": "Form.hasAction=False"
+					"hideWhen": "Form.hasAction=False",
+					"class": "text"
 				},
 				"inputActionName": {
 					"type": "input",
@@ -940,7 +932,6 @@
 					"dataSourceTypeHint": "text",
 					"dataSource": "Form:C1466.currentAction.name",
 					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"placeholder": "client-visible action name",
 					"contextMenu": "automatic",
@@ -948,7 +939,8 @@
 					"hideWhen": "Form.hasAction=False",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-text"
 				},
 				"lblHostMethod": {
 					"type": "text",
@@ -957,10 +949,10 @@
 					"width": 70,
 					"height": 18,
 					"text": "Method:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"verticalAlign": "middle",
-					"hideWhen": "Form.hasAction=False"
+					"hideWhen": "Form.hasAction=False",
+					"class": "text"
 				},
 				"inputHostMethod": {
 					"type": "input",
@@ -971,7 +963,6 @@
 					"dataSourceTypeHint": "text",
 					"dataSource": "Form:C1466.currentAction.method",
 					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"placeholder": "host project method (never sent to clients)",
 					"contextMenu": "automatic",
@@ -979,7 +970,8 @@
 					"hideWhen": "Form.hasAction=False",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-text"
 				},
 				"lblReturns": {
 					"type": "text",
@@ -988,10 +980,10 @@
 					"width": 70,
 					"height": 18,
 					"text": "Returns:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"verticalAlign": "middle",
-					"hideWhen": "Form.hasAction=False"
+					"hideWhen": "Form.hasAction=False",
+					"class": "text"
 				},
 				"inputReturns": {
 					"type": "input",
@@ -1002,7 +994,6 @@
 					"dataSourceTypeHint": "text",
 					"dataSource": "Form:C1466.currentAction.return",
 					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"placeholder": "e.g. object {count}",
 					"contextMenu": "automatic",
@@ -1010,7 +1001,8 @@
 					"hideWhen": "Form.hasAction=False",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-text"
 				},
 				"lblPurpose": {
 					"type": "text",
@@ -1019,10 +1011,10 @@
 					"width": 70,
 					"height": 18,
 					"text": "Purpose:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"verticalAlign": "middle",
-					"hideWhen": "Form.hasAction=False"
+					"hideWhen": "Form.hasAction=False",
+					"class": "text"
 				},
 				"inputPurpose": {
 					"type": "input",
@@ -1033,7 +1025,6 @@
 					"dataSourceTypeHint": "text",
 					"dataSource": "Form:C1466.currentAction.purpose",
 					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
 					"fontSize": 11,
 					"multiline": "yes",
 					"wordwrap": "automatic",
@@ -1043,7 +1034,8 @@
 					"hideWhen": "Form.hasAction=False",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-text"
 				},
 				"lblArgs": {
 					"type": "text",
@@ -1052,11 +1044,11 @@
 					"width": 300,
 					"height": 18,
 					"text": "Positional arguments",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"fontWeight": "bold",
 					"verticalAlign": "middle",
-					"hideWhen": "Form.hasAction=False"
+					"hideWhen": "Form.hasAction=False",
+					"class": "text"
 				},
 				"lbArgs": {
 					"type": "listbox",
@@ -1073,11 +1065,6 @@
 					"currentItemSource": "Form:C1466.currentArg",
 					"currentItemPositionSource": "Form:C1466.currentArgIndex",
 					"selectionMode": "single",
-					"stroke": "#000000",
-					"fill": "#FFFFFF",
-					"alternateFill": "#F7F7F7",
-					"fontFamily": "Segoe UI",
-					"fontSize": 11,
 					"hideWhen": "Form.hasAction=False",
 					"events": [
 						"onSelectionChange",
@@ -1174,7 +1161,9 @@
 								"name": "ftArgPurpose"
 							}
 						}
-					]
+					],
+					"class": "listbox",
+					"alternateFill": "#F7F7F7"
 				},
 				"btnAddArg": {
 					"type": "button",
@@ -1186,7 +1175,8 @@
 					"hideWhen": "Form.hasAction=False",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnRemoveArg": {
 					"type": "button",
@@ -1198,7 +1188,8 @@
 					"hideWhen": "Form.hasAction=False",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnArgUp": {
 					"type": "button",
@@ -1210,7 +1201,8 @@
 					"hideWhen": "Form.hasAction=False",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnArgDown": {
 					"type": "button",
@@ -1222,7 +1214,8 @@
 					"hideWhen": "Form.hasAction=False",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"lblArgsHint": {
 					"type": "text",
@@ -1231,12 +1224,12 @@
 					"width": 434,
 					"height": 50,
 					"text": "Args bind positionally — the name is documentation only. Type must be one of text, number, boolean, object, collection. Optional args have to come last (4D method semantics).",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
 					"wordwrap": "automatic",
-					"hideWhen": "Form.hasAction=False"
+					"hideWhen": "Form.hasAction=False",
+					"class": "text"
 				},
 				"lblCallDisabled": {
 					"type": "text",
@@ -1245,12 +1238,12 @@
 					"width": 250,
 					"height": 50,
 					"text": "ALLOW_CALL_METHOD is off, so nothing here is callable — this list is ignored entirely.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#8A5A00",
 					"multiline": "yes",
 					"wordwrap": "automatic",
-					"hideWhen": "Form.allowCall=True"
+					"hideWhen": "Form.allowCall=True",
+					"class": "text"
 				}
 			}
 		},
@@ -1263,7 +1256,7 @@
 					"left": 24,
 					"width": 700,
 					"height": 210,
-					"fontWeight": "bold"
+					"class": "groupBox"
 				},
 				"lblTokenStore": {
 					"type": "text",
@@ -1272,9 +1265,9 @@
 					"width": 120,
 					"height": 20,
 					"text": "Resolve tokens in:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"ddTokenStore": {
 					"type": "dropdown",
@@ -1286,7 +1279,8 @@
 					"dataSource": "Form:C1466.tokenStoreDD",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "dropdown"
 				},
 				"lblTokenStoreHint": {
 					"type": "text",
@@ -1295,11 +1289,11 @@
 					"width": 660,
 					"height": 32,
 					"text": "\"inline\" = the object built by MCP_Auth._loadTokens(). \"table\" = look up the Bearer token in the host dataclass named below.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				},
 				"lblTokenTable": {
 					"type": "text",
@@ -1308,10 +1302,10 @@
 					"width": 120,
 					"height": 20,
 					"text": "Token dataclass:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"verticalAlign": "middle",
-					"hideWhen": "Form.showTokenTable=False"
+					"hideWhen": "Form.showTokenTable=False",
+					"class": "text"
 				},
 				"inputTokenTable": {
 					"type": "input",
@@ -1322,7 +1316,6 @@
 					"dataSourceTypeHint": "text",
 					"dataSource": "Form:C1466.tokenTable",
 					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"placeholder": "host dataclass name",
 					"contextMenu": "automatic",
@@ -1330,7 +1323,8 @@
 					"hideWhen": "Form.showTokenTable=False",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-text"
 				},
 				"lblTokenTableHint": {
 					"type": "text",
@@ -1339,12 +1333,12 @@
 					"width": 660,
 					"height": 32,
 					"text": "The lookup must return the same capability shape as _loadTokens(): { token_id, read, write, call }.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
 					"wordwrap": "automatic",
-					"hideWhen": "Form.showTokenTable=False"
+					"hideWhen": "Form.showTokenTable=False",
+					"class": "text"
 				},
 				"lblTokensNote": {
 					"type": "text",
@@ -1353,11 +1347,11 @@
 					"width": 660,
 					"height": 34,
 					"text": "The tokens themselves are not edited here — they live in MCP_Auth (inline) or in that host dataclass. This file only chooses where the server looks.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				},
 				"gbRate": {
 					"type": "groupBox",
@@ -1366,7 +1360,7 @@
 					"left": 24,
 					"width": 700,
 					"height": 120,
-					"fontWeight": "bold"
+					"class": "groupBox"
 				},
 				"lblRate": {
 					"type": "text",
@@ -1375,9 +1369,9 @@
 					"width": 140,
 					"height": 20,
 					"text": "Requests per minute:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"inputRate": {
 					"type": "input",
@@ -1387,14 +1381,12 @@
 					"height": 18,
 					"dataSourceTypeHint": "integer",
 					"dataSource": "Form:C1466.rateLimit",
-					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"contextMenu": "automatic",
-					"fill": "#FFFFFF",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-integer",
+					"borderStyle": "system"
 				},
 				"lblRateHint": {
 					"type": "text",
@@ -1403,11 +1395,11 @@
 					"width": 660,
 					"height": 34,
 					"text": "Per token, in a fixed one-minute window. Exceeding it returns 429 RATE_LIMITED. 0 = unlimited.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				}
 			}
 		},
@@ -1420,7 +1412,7 @@
 					"left": 24,
 					"width": 700,
 					"height": 220,
-					"fontWeight": "bold"
+					"class": "groupBox"
 				},
 				"lblLogLevel": {
 					"type": "text",
@@ -1429,9 +1421,9 @@
 					"width": 100,
 					"height": 20,
 					"text": "Log level:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"ddLogLevel": {
 					"type": "dropdown",
@@ -1443,7 +1435,8 @@
 					"dataSource": "Form:C1466.logLevelDD",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "dropdown"
 				},
 				"lblLogLevelHint": {
 					"type": "text",
@@ -1452,11 +1445,11 @@
 					"width": 400,
 					"height": 32,
 					"text": "\"error\" logs only failed requests; \"info\" and \"debug\" log all. LOG_REQUESTS must also be on.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				},
 				"cbLogRequests": {
 					"type": "checkbox",
@@ -1467,11 +1460,10 @@
 					"text": "LOG_REQUESTS — write the request log",
 					"dataSource": "Form:C1466.logRequests",
 					"dataSourceTypeHint": "boolean",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "checkbox"
 				},
 				"lblLogReqHint": {
 					"type": "text",
@@ -1480,10 +1472,10 @@
 					"width": 640,
 					"height": 16,
 					"text": "Logs/mcp_requests.jsonl in the host: ts, action, token_id, status, error code, duration ms.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"cbAuditWrites": {
 					"type": "checkbox",
@@ -1494,11 +1486,10 @@
 					"text": "AUDIT_WRITES — durable audit of every successful mutation",
 					"dataSource": "Form:C1466.auditWrites",
 					"dataSourceTypeHint": "boolean",
-					"fontFamily": "Segoe UI",
-					"fontSize": 12,
 					"events": [
 						"onDataChange"
-					]
+					],
+					"class": "checkbox"
 				},
 				"lblAuditHint": {
 					"type": "text",
@@ -1507,10 +1498,10 @@
 					"width": 640,
 					"height": 16,
 					"text": "create / update / delete / call with token_id, to Logs/mcp_audit.jsonl. Independent of LOG_LEVEL.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"btnOpenLogs": {
 					"type": "button",
@@ -1521,7 +1512,8 @@
 					"text": "Open Logs folder",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"gbHooks": {
 					"type": "groupBox",
@@ -1530,7 +1522,7 @@
 					"left": 24,
 					"width": 700,
 					"height": 190,
-					"fontWeight": "bold"
+					"class": "groupBox"
 				},
 				"lblOnError": {
 					"type": "text",
@@ -1539,9 +1531,9 @@
 					"width": 120,
 					"height": 20,
 					"text": "ON_ERROR_CALL:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"inputOnError": {
 					"type": "input",
@@ -1552,14 +1544,14 @@
 					"dataSourceTypeHint": "text",
 					"dataSource": "Form:C1466.onErrorCall",
 					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"placeholder": "host method name (optional)",
 					"contextMenu": "automatic",
 					"fill": "#FFFFFF",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-text"
 				},
 				"lblOnErrorHint": {
 					"type": "text",
@@ -1568,10 +1560,10 @@
 					"width": 660,
 					"height": 16,
 					"text": "Called on INTERNAL errors with { ts, action, code, message }. Empty = none.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"lblOnRequest": {
 					"type": "text",
@@ -1580,9 +1572,9 @@
 					"width": 120,
 					"height": 20,
 					"text": "ON_REQUEST_CALL:",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
-					"verticalAlign": "middle"
+					"verticalAlign": "middle",
+					"class": "text"
 				},
 				"inputOnRequest": {
 					"type": "input",
@@ -1593,14 +1585,14 @@
 					"dataSourceTypeHint": "text",
 					"dataSource": "Form:C1466.onRequestCall",
 					"borderStyle": "system",
-					"fontFamily": "Segoe UI",
 					"fontSize": 12,
 					"placeholder": "host method name (optional)",
 					"contextMenu": "automatic",
 					"fill": "#FFFFFF",
 					"events": [
 						"onAfterEdit"
-					]
+					],
+					"class": "input-text"
 				},
 				"lblOnRequestHint": {
 					"type": "text",
@@ -1609,11 +1601,11 @@
 					"width": 660,
 					"height": 48,
 					"text": "Called for each request that already carries a valid, resolved token, with { action, token_id }. Return { deny: true, message: \"…\" } to refuse the request (CAP_DENIED). Hook errors never block traffic.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				}
 			}
 		},
@@ -1626,11 +1618,11 @@
 					"width": 700,
 					"height": 30,
 					"text": "The document as it will be written. Comments are preserved and any key this window doesn't know about is kept untouched.",
-					"fontFamily": "Segoe UI",
 					"fontSize": 10,
 					"stroke": "#777777",
 					"multiline": "yes",
-					"wordwrap": "automatic"
+					"wordwrap": "automatic",
+					"class": "text"
 				},
 				"inputJson": {
 					"type": "input",
@@ -1649,7 +1641,8 @@
 					"scrollbarVertical": "automatic",
 					"scrollbarHorizontal": "automatic",
 					"contextMenu": "automatic",
-					"fill": "#FFFFFF"
+					"fill": "#FFFFFF",
+					"class": "input-text"
 				},
 				"btnJsonRefresh": {
 					"type": "button",
@@ -1660,7 +1653,8 @@
 					"text": "Refresh",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnValidate": {
 					"type": "button",
@@ -1671,7 +1665,8 @@
 					"text": "Validate now",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnAddMissing": {
 					"type": "button",
@@ -1683,7 +1678,8 @@
 					"tooltip": "Copy any setting the component ships that this file is missing.",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				},
 				"btnResetDefaults": {
 					"type": "button",
@@ -1694,7 +1690,8 @@
 					"text": "Reset to component defaults…",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "button"
 				}
 			}
 		}
